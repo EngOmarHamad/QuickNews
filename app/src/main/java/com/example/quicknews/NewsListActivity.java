@@ -54,7 +54,7 @@ public class NewsListActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 String  selectedCategory = Objects.requireNonNull(tab.getText()).toString();
-                if (selectedCategory.isEmpty()){loadNews("");}else {
+                if (selectedCategory.equals("All")){loadNews("");}else {
                 loadNews(selectedCategory);}
             }
 

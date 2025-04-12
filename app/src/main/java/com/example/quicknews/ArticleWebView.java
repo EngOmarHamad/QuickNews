@@ -6,6 +6,7 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import android.widget.LinearLayout;
 import  androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import androidx.core.content.ContextCompat;
 public class ArticleWebView  extends AppCompatActivity {
     private WebView webView;
     private ProgressBar progressBar;
+    private LinearLayout progressBarParent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,7 @@ public class ArticleWebView  extends AppCompatActivity {
         setContentView(R.layout.activity_article_web_view);
 
         webView = findViewById(R.id.web_view);
+        progressBarParent = findViewById(R.id.progressBarParent);
         progressBar = findViewById(R.id.progressBar);
         Toolbar toolbar = findViewById(R.id.articles_web_view_toolbar);
         toolbar.setTitle("Article Web View");
@@ -34,7 +37,7 @@ public class ArticleWebView  extends AppCompatActivity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 // عند الانتهاء من التحميل
-                progressBar.setVisibility(View.GONE);
+                progressBarParent.setVisibility(View.GONE);
                 webView.setVisibility(View.VISIBLE);
             }
         });

@@ -11,15 +11,16 @@
         android:background="#6200EE"
         android:title="News List"
         android:titleTextColor="#FFFFFF" />
-    <LinearLayout
+        <LinearLayout
+        android:id="@+id/progressBarParent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:gravity="center"
+        android:visibility="visible">
         <ProgressBar
             android:id="@+id/progressBar"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"        android:indeterminateTint="@color/purple_600" />
     </LinearLayout>
