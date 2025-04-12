@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+    android:id="@+id/countriesList_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#6200EE"
+    android:title="Country List"
+    android:titleTextColor="#FFFFFF" />
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search Country"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:padding="8dp"
+            android:background="@android:drawable/editbox_background"
+            android:inputType="text" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/countriesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp" />
+
+</LinearLayout>
+</LinearLayout>
