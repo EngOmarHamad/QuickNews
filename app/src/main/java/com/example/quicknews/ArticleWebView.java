@@ -41,7 +41,6 @@ public class ArticleWebView  extends AppCompatActivity {
                 webView.setVisibility(View.VISIBLE);
             }
         });
-        webView.getSettings().setJavaScriptEnabled(true);
 
         // استلام الرابط
         String url = getIntent().getStringExtra("url");
